@@ -82,7 +82,7 @@ public class Layer_Blocks_Controller : MonoBehaviour
 
         if (LayerTypes_3.ToString() != layer_3_SavedType)
         {
-            Destroy(layer_4, 0.0f);
+            Destroy(layer_3, 0.0f);
 
             layer_3 = Instantiate(
                 FindLayerType(LayerTypes_3.ToString()),
