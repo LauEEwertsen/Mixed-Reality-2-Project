@@ -1,3 +1,5 @@
+using System;
+using System.CodeDom.Compiler;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -45,11 +47,15 @@ public class Layer_Blocks_Controller : MonoBehaviour
     string layer_4_SavedType;
     string layer_5_SavedType;
 
+
+    public SerialController SC;
+
+    string recievedString;
+
     // Start is called before the first frame update
     void Start()
     {
-        
-
+        SC = GetComponent<SerialController>();
     }
 
     // Update is called once per frame
@@ -114,6 +120,28 @@ public class Layer_Blocks_Controller : MonoBehaviour
                 Quaternion.identity);
 
             layer_5_SavedType = LayerTypes_5.ToString();
+        }
+
+
+
+        recievedString = SC.ReadSerialMessage();
+
+        if (recievedString == null)
+            return;
+
+        // Check if the message is plain data or a connect/disconnect event.
+        if (ReferenceEquals(recievedString, SerialController.SERIAL_DEVICE_CONNECTED))
+            Debug.Log("Connection established");
+        else if (ReferenceEquals(recievedString, SerialController.SERIAL_DEVICE_DISCONNECTED))
+            Debug.Log("Connection attempt failed or disconnection detected");
+        else            
+        {
+            Debug.Log("Message arrived: " + recievedString);
+      
+            int BlockNumber = recievedString[0];        
+            //Color();
+
+
         }
 
     }
