@@ -1,19 +1,8 @@
 using System;
-using System.CodeDom.Compiler;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Xml.Linq;
-using Unity.Collections.LowLevel.Unsafe;
-using Unity.VisualScripting;
 using UnityEditor;
-using UnityEditor.PackageManager;
-using UnityEditor.U2D.Aseprite;
 using UnityEngine;
-using UnityEngine.Windows;
-using static Unity.VisualScripting.Member;
-using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class Layer_Blocks_Controller : MonoBehaviour
 {
