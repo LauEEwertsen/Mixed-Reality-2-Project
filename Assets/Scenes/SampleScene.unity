@@ -5837,6 +5837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d76190bb678094da1299d95937549e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LayerTypePrefab_0: {fileID: 502335380282101581, guid: 89891f7ed73174c4f8613aaab54e9981, type: 3}
   LayerTypePrefab_1: {fileID: 2168658081158526985, guid: 7fdd0cd361e31574d96e98ffecb34be9, type: 3}
   LayerTypePrefab_2: {fileID: 3815035759394412269, guid: 7e23ccedcf3509e45835c8d720e7c715, type: 3}
   LayerTypePrefab_3: {fileID: 8199033754752753550, guid: d35962a87027ece48b678429807b35c9, type: 3}
@@ -5847,11 +5848,11 @@ MonoBehaviour:
   LayerPos_3: {fileID: 957303565}
   LayerPos_4: {fileID: 541165756}
   LayerPos_5: {fileID: 2101006012}
-  LayerTypes_1: 1
-  LayerTypes_2: 0
-  LayerTypes_3: 2
-  LayerTypes_4: 4
-  LayerTypes_5: 3
+  Layer_1_Type: 2
+  Layer_2_Type: 1
+  Layer_3_Type: 0
+  Layer_4_Type: 3
+  Layer_5_Type: 4
   SC: {fileID: 1803635116}
 --- !u!4 &1803635115
 Transform:
@@ -5883,8 +5884,8 @@ MonoBehaviour:
   portName: COM5
   baudRate: 9600
   messageListener: {fileID: 0}
-  reconnectionDelay: 1000
-  maxUnreadMessages: 1
+  reconnectionDelay: 100
+  maxUnreadMessages: 10
 --- !u!1 &2026011972
 GameObject:
   m_ObjectHideFlags: 0
